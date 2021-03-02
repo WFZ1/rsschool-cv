@@ -34,7 +34,7 @@ English — *Pre-Intermediate*
 
 ### Professional experience ###
 **Freelance** - *Front-End developer* (07.2020)  
-Creation / revision / fixing of bugs / updating of functionality of online stores on the CMS Shopify. Layout to html. Working directly with customers or through [freelancehunt.com](freelancehunt.com/freelancer/p_skumenko.html).  
+Creation / revision / fixing of bugs / updating of functionality of online stores on the CMS Shopify. Layout to html. Working directly with customers or through [freelancehunt.com](https://freelancehunt.com/freelancer/p_skumenko.html).  
 
 #### Ronis ####
 **Position:** *Front-End developer* (02.2020 — 05.2020)  
