@@ -1,2 +1,1 @@
-# rsschool-cv
-CV
+https://WFZ1.github.io/rsschool-cv/cv
