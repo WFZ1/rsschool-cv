@@ -1,0 +1,190 @@
+@import "variables";
+@import "mixins";
+@import "fonts";
+@import "reset";
+
+/**
+ * ----------------------------------------------------------------------------
+ *  BASE
+ * ----------------------------------------------------------------------------
+ */
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: $font-main;
+  color: $text-color;
+  font-size: $text-font-size;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { font-family: $font-extra; }
+
+a {
+  color: $link-color;
+  font-weight: 600;
+  transition: color .3s;
+
+  &:hover {
+    color: $link-color-hover;
+  }
+}
+
+p { margin-bottom: 15px; }
+
+code {
+  white-space: pre-wrap;
+  font-family: $font-extra-2;
+  font-weight: 700;
+}
+
+hr {
+  margin: 30px 0;
+  border: 0;
+  border-top: 1px solid #e0dfdf;
+  border-bottom: 1px solid #fefefe;
+}
+
+.wrapper {
+  background-color: $background;
+  padding: 15px;
+  min-width: 320px;
+
+  @include at ($min, $tablet) {
+    padding: 30px;
+  }
+
+  @include at ($min, $lap) {
+    margin: 10px auto;
+    max-width: 900px;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+  }
+}
+
+.block {
+  margin-bottom: 20px;
+
+  @include at ($min, $tablet) {
+    margin-bottom: 30px;
+  }
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+
+  > img,
+  > picture {
+    margin-right: 10px;
+  }
+}
+
+.title {
+  text-transform: uppercase;
+  color: $title-color;
+  margin-bottom: 30px;
+
+  .row & {
+    margin: 0;
+  }
+}
+
+/**
+ * ----------------------------------------------------------------------------
+ *  CONTENT
+ * ----------------------------------------------------------------------------
+ */
+
+/* CONTACTS ================================================================================ */
+
+#contacts {
+  @include at ($min, $tablet) {
+    display: flex;
+  }
+
+  p {
+    @include at ($min, $phone) {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.avatar {
+  display: block;
+  max-width: 300px;
+  width: 100%;
+  height: 276px;
+  
+  @include at ($max, $tablet - 1) {
+    margin: 0 auto 20px;
+  }
+
+  @include at ($min, $tablet) {
+    margin-right: 30px;
+  }
+}
+
+/* TECHNICAL SKILLS ================================================================================ */
+
+#technical-skills {
+  img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  i { font-style: normal; }
+}
+
+/* FOREIGN LANGUAGE ================================================================================ */
+
+#foreign-language {
+  img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+}
+
+/* EDUCATION ================================================================================ */
+
+#hnue img {
+  width: 55px;
+  height: 54px;
+}
+
+#kctc img {
+  height: 51px;
+  width: 90px;
+}
+
+#additional-education {
+  margin-top: 45px;
+
+  h3 { text-transform: uppercase; }
+}
+
+/* HOBBIES ================================================================================ */
+
+#hobbies {
+  img {
+    width: 40px;
+    height: 40px;
+  }
+
+  p { text-transform: capitalize; }
+}
+
+/* CODE SLOGAN ================================================================================ */
+
+.code-slogan {
+  @include at ($max, $phone) {
+    font-size: rem(12, $text-size);
+  }
+}

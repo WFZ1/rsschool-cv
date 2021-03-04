@@ -1,0 +1,331 @@
+/**
+ * --------------------------------------------------------------------------------
+ *  VARIABLES
+ * --------------------------------------------------------------------------------
+ */
+/* COLORS ================================================================================ */
+/* VIEWPORT ================================================================================ */
+/* TYPOGRAPHY ================================================================================ */
+/* OTHER ================================================================================ */
+/**
+ * ----------------------------------------------------------------------------
+ *  MIXINS
+ * ----------------------------------------------------------------------------
+ */
+/* BREAKPOINTS ================================================================================ */
+/* PX TO EM ================================================================================ */
+/* PX TO REM ================================================================================ */
+/**
+ * --------------------------------------------------------------------------------
+ *  FONTS
+ * --------------------------------------------------------------------------------
+ */
+/* LATO ================================================================================ */
+@font-face {
+  font-family: Lato;
+  src: url("../fonts/Lato-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url("../fonts/Lato-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url("../fonts/Lato-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url("../fonts/Lato-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* OPEN SANS ================================================================================ */
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-SemiBoldItalic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* MAJOR MONO DISPLAY ================================================================================ */
+@font-face {
+  font-family: "Major Mono Display";
+  src: url("../fonts/MajorMonoDisplay-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/**
+ * ----------------------------------------------------------------------------
+ *  RESET
+ * ----------------------------------------------------------------------------
+ */
+body {
+  margin: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+img {
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+}
+
+/**
+ * ----------------------------------------------------------------------------
+ *  BASE
+ * ----------------------------------------------------------------------------
+ */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Lato, sans-serif;
+}
+
+a {
+  color: #54a06c;
+  font-weight: 600;
+  transition: color .3s;
+}
+
+a:hover {
+  color: #a4cfb2;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+code {
+  white-space: pre-wrap;
+  font-family: "Major Mono Display", monospace;
+  font-weight: 700;
+}
+
+hr {
+  margin: 30px 0;
+  border: 0;
+  border-top: 1px solid #e0dfdf;
+  border-bottom: 1px solid #fefefe;
+}
+
+.wrapper {
+  background-color: #fbfbfb;
+  padding: 15px;
+  min-width: 320px;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    padding: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    margin: 10px auto;
+    max-width: 900px;
+    border: 1px solid #efefef;
+    border-radius: 5px;
+  }
+}
+
+.block {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .block {
+    margin-bottom: 30px;
+  }
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.row > img,
+.row > picture {
+  margin-right: 10px;
+}
+
+.title {
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.row .title {
+  margin: 0;
+}
+
+/**
+ * ----------------------------------------------------------------------------
+ *  CONTENT
+ * ----------------------------------------------------------------------------
+ */
+/* CONTACTS ================================================================================ */
+@media screen and (min-width: 768px) {
+  #contacts {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  #contacts p {
+    font-size: 1.2rem;
+  }
+}
+
+.avatar {
+  display: block;
+  max-width: 300px;
+  width: 100%;
+  height: 276px;
+}
+
+@media screen and (max-width: 767px) {
+  .avatar {
+    margin: 0 auto 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .avatar {
+    margin-right: 30px;
+  }
+}
+
+/* TECHNICAL SKILLS ================================================================================ */
+#technical-skills img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+#technical-skills i {
+  font-style: normal;
+}
+
+/* FOREIGN LANGUAGE ================================================================================ */
+#foreign-language img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+/* EDUCATION ================================================================================ */
+#hnue img {
+  width: 55px;
+  height: 54px;
+}
+
+#kctc img {
+  height: 51px;
+  width: 90px;
+}
+
+#additional-education {
+  margin-top: 45px;
+}
+
+#additional-education h3 {
+  text-transform: uppercase;
+}
+
+/* HOBBIES ================================================================================ */
+#hobbies img {
+  width: 40px;
+  height: 40px;
+}
+
+#hobbies p {
+  text-transform: capitalize;
+}
+
+/* CODE SLOGAN ================================================================================ */
+@media screen and (max-width: 480px) {
+  .code-slogan {
+    font-size: 0.75rem;
+  }
+}
