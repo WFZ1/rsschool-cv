@@ -1,0 +1,38 @@
+/**
+ * --------------------------------------------------------------------------------
+ *  VARIABLES
+ * --------------------------------------------------------------------------------
+ */
+
+/* COLORS ================================================================================ */
+
+$text-color: #444;
+$title-color: #555;
+$link-color: #54a06c;
+$link-color-hover: lighten($link-color, 25%);
+$background: #fbfbfb;
+$border-color: #efefef;
+
+/* VIEWPORT ================================================================================ */
+
+$min: min-width;
+$max: max-width;
+
+$phone:       480px;
+$tablet:      768px;
+$lap:         1024px;
+$desk:        1280px;
+$widescreen:  1440px;
+
+/* TYPOGRAPHY ================================================================================ */
+
+$font-main: "Open Sans", sans-serif;
+$font-extra: Lato, sans-serif;
+$font-extra-2: "Major Mono Display", monospace;
+
+$text-size: 16;
+$text-font-size: $text-size + px;
+
+/* OTHER ================================================================================ */
+
+$transition: .3s all;
