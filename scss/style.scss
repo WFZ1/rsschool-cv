@@ -154,10 +154,13 @@ hr {
 /* TECHNICAL SKILLS ================================================================================ */
 
 #technical-skills {
-  img {
-    width: rem(20, $text-size);
-    height: rem(20, $text-size);
-    margin-right: rem(10, $text-size);
+  ul.lazyloaded {
+    list-style: inside url("../images/icon-check.svg");
+    
+    ::marker {
+      font-size: rem(37, $text-size);
+      line-height: 0;
+    }
   }
 
   i { font-style: normal; }
@@ -165,12 +168,10 @@ hr {
 
 /* FOREIGN LANGUAGE ================================================================================ */
 
-#foreign-language {
-  img {
-    width: rem(30, $text-size);
-    height: rem(30, $text-size);
-    margin-right: rem(10, $text-size);
-  }
+#foreign-language img {
+  width: rem(30, $text-size);
+  height: rem(30, $text-size);
+  margin-right: rem(10, $text-size);
 }
 
 /* EDUCATION ================================================================================ */
@@ -300,10 +301,8 @@ footer {
 .github {
   margin-left: auto;
 
-  svg {
-    &:hover {
-      fill: #555;
-    }
+  svg:hover {
+    fill: #555;
   }
 }
 
