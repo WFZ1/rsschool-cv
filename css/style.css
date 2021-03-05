@@ -305,10 +305,13 @@ hr {
 }
 
 /* TECHNICAL SKILLS ================================================================================ */
-#technical-skills img {
-  width: 1.25rem;
-  height: 1.25rem;
-  margin-right: 0.625rem;
+#technical-skills ul.lazyloaded {
+  list-style: inside url("../images/icon-check.svg");
+}
+
+#technical-skills ul.lazyloaded ::marker {
+  font-size: 2.3125rem;
+  line-height: 0;
 }
 
 #technical-skills i {
