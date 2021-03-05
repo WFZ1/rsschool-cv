@@ -128,12 +128,20 @@ p:last-child {
   margin-bottom: 0;
 }
 
-img {
+img,
+svg {
   vertical-align: middle;
+  max-width: 100%;
 }
 
 a {
   text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 /**
@@ -145,7 +153,7 @@ a {
   box-sizing: border-box;
 }
 
-body {
+html {
   font-family: "Open Sans", sans-serif;
   color: #444;
   font-size: 16px;
@@ -171,17 +179,25 @@ a:hover {
 }
 
 p {
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
+}
+
+li {
+  margin-bottom: 0.9375rem;
+}
+
+li:last-of-type {
+  margin-bottom: 0;
 }
 
 code {
-  white-space: pre-wrap;
+  white-space: pre-line;
   font-family: "Major Mono Display", monospace;
   font-weight: 700;
 }
 
 hr {
-  margin: 30px 0;
+  margin: 1.875rem 0;
   border: 0;
   border-top: 1px solid #e0dfdf;
   border-bottom: 1px solid #fefefe;
@@ -189,50 +205,51 @@ hr {
 
 .wrapper {
   background-color: #fbfbfb;
-  padding: 15px;
-  min-width: 320px;
+  padding: 0.9375rem;
+  min-width: 20rem;
 }
 
 @media screen and (min-width: 768px) {
   .wrapper {
-    padding: 30px;
+    padding: 1.875rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .wrapper {
-    margin: 10px auto;
-    max-width: 900px;
+    margin: 0.625rem auto;
+    max-width: 56.25rem;
     border: 1px solid #efefef;
     border-radius: 5px;
   }
 }
 
 .block {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 @media screen and (min-width: 768px) {
   .block {
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
   }
 }
 
 .row {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
 }
 
 .row > img,
 .row > picture {
-  margin-right: 10px;
+  margin-right: 0.625rem;
+  flex-shrink: 0;
 }
 
 .title {
   text-transform: uppercase;
   color: #555;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 
 .row .title {
@@ -252,35 +269,46 @@ hr {
 }
 
 @media screen and (min-width: 480px) {
-  #contacts p {
+  #contacts li {
     font-size: 1.2rem;
   }
 }
 
 .avatar {
   display: block;
-  max-width: 300px;
+  max-width: 18.75rem;
   width: 100%;
-  height: 276px;
+  height: 17.25rem;
 }
 
 @media screen and (max-width: 767px) {
   .avatar {
-    margin: 0 auto 20px;
+    margin: 0 auto 1.25rem;
   }
 }
 
 @media screen and (min-width: 768px) {
   .avatar {
-    margin-right: 30px;
+    margin-right: 1.875rem;
+  }
+}
+
+.avatar img {
+  width: 100%;
+}
+
+/* SUMMARY ================================================================================ */
+@media screen and (max-width: 480px) {
+  .code-slogan {
+    font-size: 0.875rem;
   }
 }
 
 /* TECHNICAL SKILLS ================================================================================ */
 #technical-skills img {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.625rem;
 }
 
 #technical-skills i {
@@ -289,43 +317,160 @@ hr {
 
 /* FOREIGN LANGUAGE ================================================================================ */
 #foreign-language img {
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
+  width: 1.875rem;
+  height: 1.875rem;
+  margin-right: 0.625rem;
 }
 
 /* EDUCATION ================================================================================ */
 #hnue img {
-  width: 55px;
-  height: 54px;
+  width: 3.4375rem;
+  height: 3.375rem;
 }
 
 #kctc img {
-  height: 51px;
-  width: 90px;
+  height: 3.1875rem;
+  width: 5.625rem;
 }
 
 #additional-education {
-  margin-top: 45px;
+  margin-top: 2.8125rem;
 }
 
 #additional-education h3 {
   text-transform: uppercase;
 }
 
+/* PROJECTS ================================================================================ */
+@media screen and (min-width: 768px) {
+  #projects {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+#projects h2 {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 768px) {
+  #projects h2 {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #projects section {
+    margin-bottom: 1.875rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #projects section {
+    width: 48%;
+  }
+}
+
+#projects a {
+  display: block;
+  margin-bottom: 1.25rem;
+}
+
 /* HOBBIES ================================================================================ */
 #hobbies img {
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 #hobbies p {
   text-transform: capitalize;
 }
 
-/* CODE SLOGAN ================================================================================ */
-@media screen and (max-width: 480px) {
-  .code-slogan {
-    font-size: 0.75rem;
+/* FOOTER ================================================================================ */
+@media screen and (min-width: 768px) {
+  footer {
+    margin-top: 3.125rem;
   }
+}
+
+footer ul {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  footer ul {
+    flex-wrap: wrap;
+  }
+}
+
+footer li {
+  margin-bottom: 0;
+  padding: 0.3125rem;
+}
+
+footer a {
+  display: block;
+}
+
+footer svg {
+  transition: fill .3s;
+}
+
+.rs-school svg {
+  width: 9.375rem;
+}
+
+.rs-school svg:hover {
+  fill: #555;
+}
+
+.rs-school svg .st0,
+.rs-school svg .st5 {
+  fill: #fff;
+}
+
+.rs-school svg .st5,
+.rs-school svg .st7 {
+  stroke: #000;
+  stroke-width: 4;
+  stroke-miterlimit: 10;
+}
+
+.rs-school svg .st7 {
+  fill: none;
+}
+
+@media screen and (max-width: 767px) {
+  .copyrights {
+    width: 100%;
+    order: 1;
+    text-align: center;
+    margin: 0.9375rem 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .copyrights {
+    margin: 0 auto;
+    font-size: 1.2rem;
+  }
+}
+
+.github {
+  margin-left: auto;
+}
+
+.github svg:hover {
+  fill: #555;
+}
+
+.linkedin svg {
+  fill: #0a66c2;
+  transition: .3s;
+}
+
+.linkedin svg:hover {
+  filter: brightness(1.2);
 }
