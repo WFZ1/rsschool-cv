@@ -1,0 +1,316 @@
+@import "variables";
+@import "mixins";
+@import "fonts";
+@import "reset";
+
+/**
+ * ----------------------------------------------------------------------------
+ *  BASE
+ * ----------------------------------------------------------------------------
+ */
+
+* { box-sizing: border-box; }
+
+html {
+  font-family: $font-main;
+  color: $text-color;
+  font-size: $text-font-size;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { font-family: $font-extra; }
+
+a {
+  color: $link-color;
+  font-weight: 600;
+  transition: color .3s;
+
+  &:hover {
+    color: $link-color-hover;
+  }
+}
+
+p { margin-bottom: rem(15, $text-size); }
+
+li { 
+  margin-bottom: rem(15, $text-size);
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+code {
+  white-space: pre-line;
+  font-family: $font-extra-2;
+  font-weight: 700;
+}
+
+hr {
+  margin: rem(30, $text-size) 0;
+  border: 0;
+  border-top: 1px solid #e0dfdf;
+  border-bottom: 1px solid #fefefe;
+}
+
+.wrapper {
+  background-color: $background;
+  padding: rem(15, $text-size);
+  min-width: rem(320, $text-size);
+
+  @include at ($min, $tablet) {
+    padding: rem(30, $text-size);
+  }
+
+  @include at ($min, $lap) {
+    margin: rem(10, $text-size) auto;
+    max-width: rem(900, $text-size);
+    border: 1px solid $border-color;
+    border-radius: 5px;
+  }
+}
+
+.block {
+  margin-bottom: rem(20, $text-size);
+
+  @include at ($min, $tablet) {
+    margin-bottom: rem(30, $text-size);
+  }
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: rem(15, $text-size);
+
+  > img,
+  > picture {
+    margin-right: rem(10, $text-size);
+    flex-shrink: 0;
+  }
+}
+
+.title {
+  text-transform: uppercase;
+  color: $title-color;
+  margin-bottom: rem(30, $text-size);
+
+  .row & {
+    margin: 0;
+  }
+}
+
+/**
+ * ----------------------------------------------------------------------------
+ *  CONTENT
+ * ----------------------------------------------------------------------------
+ */
+
+/* CONTACTS ================================================================================ */
+
+#contacts {
+  @include at ($min, $tablet) {
+    display: flex;
+  }
+
+  li {
+    @include at ($min, $phone) {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.avatar {
+  display: block;
+  max-width: rem(300, $text-size);
+  width: 100%;
+  height: rem(276, $text-size);
+  
+  @include at ($max, $tablet - 1) {
+    margin: 0 auto rem(20, $text-size);
+  }
+
+  @include at ($min, $tablet) {
+    margin-right: rem(30, $text-size);
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+/* SUMMARY ================================================================================ */
+
+.code-slogan {
+  @include at ($max, $phone) {
+    font-size: rem(14, $text-size);
+  }
+}
+
+/* TECHNICAL SKILLS ================================================================================ */
+
+#technical-skills {
+  ul.lazyloaded {
+    list-style: inside url("../images/icon-check.svg");
+    
+    ::marker {
+      font-size: rem(37, $text-size);
+      line-height: 0;
+    }
+  }
+
+  i { font-style: normal; }
+}
+
+/* FOREIGN LANGUAGE ================================================================================ */
+
+#foreign-language img {
+  width: rem(30, $text-size);
+  height: rem(30, $text-size);
+  margin-right: rem(10, $text-size);
+}
+
+/* EDUCATION ================================================================================ */
+
+#hnue img {
+  width: rem(55, $text-size);
+  height: rem(54, $text-size);
+}
+
+#kctc img {
+  height: rem(51, $text-size);
+  width: rem(90, $text-size);
+}
+
+#additional-education {
+  margin-top: rem(45, $text-size);
+
+  h3 { text-transform: uppercase; }
+}
+
+/* PROJECTS ================================================================================ */
+
+#projects {
+  @include at ($min, $tablet) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  h2 {
+    margin-top: 0;
+
+    @include at ($min, $tablet) {
+      width: 100%;
+    }
+  }
+
+  section {
+    @include at ($max, $tablet - 1) {
+      margin-bottom: rem(30, $text-size);
+    }
+
+    @include at ($min, $tablet) {
+      width: 48%;
+    }
+  }
+
+  a {
+    display: block;
+    margin-bottom: rem(20, $text-size);
+  }
+}
+
+/* HOBBIES ================================================================================ */
+
+#hobbies {
+  img {
+    width: rem(40, $text-size);
+    height: rem(40, $text-size);
+  }
+
+  p { text-transform: capitalize; }
+}
+
+/* FOOTER ================================================================================ */
+
+footer {
+  @include at ($min, $tablet) {
+    margin-top: rem(50, $text-size);
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+
+    @include at ($max, $tablet - 1) {
+      flex-wrap: wrap;
+    }
+  }
+
+  li {
+    margin-bottom: 0;
+    padding: rem(5, $text-size);
+  }
+
+  a {
+    display: block;
+  }
+
+  svg {
+    transition: fill .3s;
+  }
+}
+
+.rs-school svg {
+  width: rem(150, $text-size);
+  
+  &:hover { fill: #555; }
+  
+  .st0,
+  .st5 { fill: #fff; }
+
+  .st5,
+  .st7 {
+    stroke: #000;
+    stroke-width: 4;
+    stroke-miterlimit: 10;
+  }
+  
+  .st7{ fill: none; }
+}
+
+.copyrights {
+  @include at ($max, $tablet - 1) {
+    width: 100%;
+    order: 1;
+    text-align: center;
+    margin: rem(15, $text-size) 0;
+  }
+
+  @include at ($min, $tablet) {
+    margin: 0 auto;
+    font-size: 1.2rem;
+  }
+}
+
+.github {
+  margin-left: auto;
+
+  svg:hover {
+    fill: #555;
+  }
+}
+
+.linkedin svg {
+  fill: #0a66c2;
+  transition: .3s;
+
+  &:hover {
+    filter: brightness(1.2);
+  }
+}

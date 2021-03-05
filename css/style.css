@@ -1,0 +1,479 @@
+/**
+ * --------------------------------------------------------------------------------
+ *  VARIABLES
+ * --------------------------------------------------------------------------------
+ */
+/* COLORS ================================================================================ */
+/* VIEWPORT ================================================================================ */
+/* TYPOGRAPHY ================================================================================ */
+/* OTHER ================================================================================ */
+/**
+ * ----------------------------------------------------------------------------
+ *  MIXINS
+ * ----------------------------------------------------------------------------
+ */
+/* BREAKPOINTS ================================================================================ */
+/* PX TO EM ================================================================================ */
+/* PX TO REM ================================================================================ */
+/**
+ * --------------------------------------------------------------------------------
+ *  FONTS
+ * --------------------------------------------------------------------------------
+ */
+/* LATO ================================================================================ */
+@font-face {
+  font-family: Lato;
+  src: url("../fonts/Lato-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url("../fonts/Lato-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url("../fonts/Lato-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url("../fonts/Lato-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* OPEN SANS ================================================================================ */
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-SemiBoldItalic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* MAJOR MONO DISPLAY ================================================================================ */
+@font-face {
+  font-family: "Major Mono Display";
+  src: url("../fonts/MajorMonoDisplay-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/**
+ * ----------------------------------------------------------------------------
+ *  RESET
+ * ----------------------------------------------------------------------------
+ */
+body {
+  margin: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+img,
+svg {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/**
+ * ----------------------------------------------------------------------------
+ *  BASE
+ * ----------------------------------------------------------------------------
+ */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+  color: #444;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Lato, sans-serif;
+}
+
+a {
+  color: #54a06c;
+  font-weight: 600;
+  transition: color .3s;
+}
+
+a:hover {
+  color: #a4cfb2;
+}
+
+p {
+  margin-bottom: 0.9375rem;
+}
+
+li {
+  margin-bottom: 0.9375rem;
+}
+
+li:last-of-type {
+  margin-bottom: 0;
+}
+
+code {
+  white-space: pre-line;
+  font-family: "Major Mono Display", monospace;
+  font-weight: 700;
+}
+
+hr {
+  margin: 1.875rem 0;
+  border: 0;
+  border-top: 1px solid #e0dfdf;
+  border-bottom: 1px solid #fefefe;
+}
+
+.wrapper {
+  background-color: #fbfbfb;
+  padding: 0.9375rem;
+  min-width: 20rem;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    padding: 1.875rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    margin: 0.625rem auto;
+    max-width: 56.25rem;
+    border: 1px solid #efefef;
+    border-radius: 5px;
+  }
+}
+
+.block {
+  margin-bottom: 1.25rem;
+}
+
+@media screen and (min-width: 768px) {
+  .block {
+    margin-bottom: 1.875rem;
+  }
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.9375rem;
+}
+
+.row > img,
+.row > picture {
+  margin-right: 0.625rem;
+  flex-shrink: 0;
+}
+
+.title {
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 1.875rem;
+}
+
+.row .title {
+  margin: 0;
+}
+
+/**
+ * ----------------------------------------------------------------------------
+ *  CONTENT
+ * ----------------------------------------------------------------------------
+ */
+/* CONTACTS ================================================================================ */
+@media screen and (min-width: 768px) {
+  #contacts {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  #contacts li {
+    font-size: 1.2rem;
+  }
+}
+
+.avatar {
+  display: block;
+  max-width: 18.75rem;
+  width: 100%;
+  height: 17.25rem;
+}
+
+@media screen and (max-width: 767px) {
+  .avatar {
+    margin: 0 auto 1.25rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .avatar {
+    margin-right: 1.875rem;
+  }
+}
+
+.avatar img {
+  width: 100%;
+}
+
+/* SUMMARY ================================================================================ */
+@media screen and (max-width: 480px) {
+  .code-slogan {
+    font-size: 0.875rem;
+  }
+}
+
+/* TECHNICAL SKILLS ================================================================================ */
+#technical-skills ul.lazyloaded {
+  list-style: inside url("../images/icon-check.svg");
+}
+
+#technical-skills ul.lazyloaded ::marker {
+  font-size: 2.3125rem;
+  line-height: 0;
+}
+
+#technical-skills i {
+  font-style: normal;
+}
+
+/* FOREIGN LANGUAGE ================================================================================ */
+#foreign-language img {
+  width: 1.875rem;
+  height: 1.875rem;
+  margin-right: 0.625rem;
+}
+
+/* EDUCATION ================================================================================ */
+#hnue img {
+  width: 3.4375rem;
+  height: 3.375rem;
+}
+
+#kctc img {
+  height: 3.1875rem;
+  width: 5.625rem;
+}
+
+#additional-education {
+  margin-top: 2.8125rem;
+}
+
+#additional-education h3 {
+  text-transform: uppercase;
+}
+
+/* PROJECTS ================================================================================ */
+@media screen and (min-width: 768px) {
+  #projects {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+#projects h2 {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 768px) {
+  #projects h2 {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #projects section {
+    margin-bottom: 1.875rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #projects section {
+    width: 48%;
+  }
+}
+
+#projects a {
+  display: block;
+  margin-bottom: 1.25rem;
+}
+
+/* HOBBIES ================================================================================ */
+#hobbies img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+#hobbies p {
+  text-transform: capitalize;
+}
+
+/* FOOTER ================================================================================ */
+@media screen and (min-width: 768px) {
+  footer {
+    margin-top: 3.125rem;
+  }
+}
+
+footer ul {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  footer ul {
+    flex-wrap: wrap;
+  }
+}
+
+footer li {
+  margin-bottom: 0;
+  padding: 0.3125rem;
+}
+
+footer a {
+  display: block;
+}
+
+footer svg {
+  transition: fill .3s;
+}
+
+.rs-school svg {
+  width: 9.375rem;
+}
+
+.rs-school svg:hover {
+  fill: #555;
+}
+
+.rs-school svg .st0,
+.rs-school svg .st5 {
+  fill: #fff;
+}
+
+.rs-school svg .st5,
+.rs-school svg .st7 {
+  stroke: #000;
+  stroke-width: 4;
+  stroke-miterlimit: 10;
+}
+
+.rs-school svg .st7 {
+  fill: none;
+}
+
+@media screen and (max-width: 767px) {
+  .copyrights {
+    width: 100%;
+    order: 1;
+    text-align: center;
+    margin: 0.9375rem 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .copyrights {
+    margin: 0 auto;
+    font-size: 1.2rem;
+  }
+}
+
+.github {
+  margin-left: auto;
+}
+
+.github svg:hover {
+  fill: #555;
+}
+
+.linkedin svg {
+  fill: #0a66c2;
+  transition: .3s;
+}
+
+.linkedin svg:hover {
+  filter: brightness(1.2);
+}
